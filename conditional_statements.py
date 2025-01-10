@@ -35,6 +35,47 @@ print("The minimum value is:", minimum_value)
 print(max1)
 
 
+a = True;
+# True = 1
+b = False;
+# False = 0
+print(a>b)
+
+
+first_name = "Aswarthana";
+last_name = "Reddy"
+print(first_name > last_name)
+
+
+
+n1 = 5;
+for i in range(1, n1+1):
+    for j in range(1, i+1):
+        print("* ", end = "")
+    print()
+
+
+print()
+print()
+print()
+
+n = 6
+
+for i in range(1, n + 1):
+    print("* " * i)
+
+
+print()
+print()
+print()
+
+p = 5;
+for i in range(1, p + 1):
+    print(" " * (p - i), end = "")
+    print("* " * i)
+
+
+
 
 
 

@@ -2,6 +2,7 @@ from datetime import datetime, timedelta;
 from array import array
 # import helprs;
 from helpers import wishYouHappyNew
+from sys import argv
 
 # name = input('What is your name ....?')
 # print('Hello ' + name)
@@ -175,5 +176,26 @@ print(fullName('ANR'))
 # print(helprs.getName())
 
 print(wishYouHappyNew())
+
+
+
+x = eval('10+10')
+print(x)
+
+# val1 = eval(input('enter your expression:'))
+# print(val1)
+
+
+
+print(type(argv))
+
+for x in argv:
+    print(x)
+
+for x in argv:
+    n = int(x)
+    sum = sum + n
+    print(sum)
+
 
 

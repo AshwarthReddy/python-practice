@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 st.title('Prompt Engineering Example')
 
-genai.configure(api_key="")
+genai.configure(api_key="API_KEY")
 
 user_input = st.text_input('Enter Your Query')
 
