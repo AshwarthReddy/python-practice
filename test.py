@@ -187,15 +187,51 @@ print(x)
 
 
 
-print(type(argv))
+# print(type(argv))
 
-for x in argv:
-    print(x)
+# for x in argv:
+#     print(x)
 
-for x in argv:
-    n = int(x)
-    sum = sum + n
-    print(sum)
+# for x in argv:
+#     n = int(x)
+#     sum = sum + n
+#     print(sum)
+
+#  STRING  itaratiom
+
+s = 'Learning python is very easy'
+n = len(s)
+i = 0
+print('Forward Direction')
+
+while i < n:
+    print(s[i], end = '')
+    i += 1
+
+print()
+i = -1
+while i >= -n:
+    print(s[i], end = '')
+    i = i - 1;
+
+
+print()
+for i in s:
+    print(i, end='')
+
+print()
+
+
+for i in s[::]:
+    print(i, end = '')
+
+print()
+
+for i in s[::-1]:
+    print(i, end = '')
 
 
 
+print()
+
+print('Learning' in s)
