@@ -65,3 +65,81 @@ print(input.endswith('go'))
 print('your salary is {}, age is {} and city {}'.format(5000, 31, 'Dubai'))
 print('Your Salary is {0}, age is {1} and city is {2}'.format(5000, 31, 'Dubai'))
 print('Your Salary is {x}, age is {y} and city is {z}'.format(x = 5000, y = 31, z = 'Dubai'))
+
+
+
+
+# . Write a program to sort the characters of the string and first alphabet symbolsfollowed by numeric values
+s = 'B4A1D3'
+
+s1=s2=output=''
+
+for i in s:
+   if i.isalpha():
+      s1 = s1+i;
+   else:
+      s2 = s2+i;
+
+for i in sorted(s1):
+   output = output+i;
+
+for i in sorted(s2):
+   output = output + i;
+
+
+print(output)
+
+'''
+Write a program for the following requirement
+input = a4b3c2
+output = aaaabbbcc
+'''
+
+# Write a program for the following requirement 
+# 
+
+input1 = 'a4b3c2'
+output1 = ''
+for i in input1:
+   if i.isalpha():
+      output1 = output1+i;
+      previous = i;
+   else:
+    output1 =  output1 + previous*(int(i)-1)
+
+print(output1)
+
+
+
+'''
+Write a program to remove duplicate characters from the given input string?
+'''
+
+input2 = 'ABCDABBCDABBBCCCDDEEEF'
+l = [];
+
+for i in input2:
+   if i not in l:
+      l.append(i);
+
+output3 = ''.join(l);
+
+print(output3)
+
+'''
+Write a program to find the number of occurrences of each character present in the
+given String?
+'''
+
+
+input4 = 'ABCABCABBCDE';
+d = {};
+
+for i in input4:
+   if i in d.keys():
+      d[i] = d[i]+1
+   else:
+      d[i]= 1;
+
+for k, v in d.items():
+   print('{} = {} Times'.format(k, v))
