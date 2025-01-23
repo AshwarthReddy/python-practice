@@ -118,4 +118,118 @@ print()
 print(list.sort(reverse=True))
 
 
-print(list(range(2)))
+# print(list(range(2)))
+
+
+# TUPLE DATA STRUCTURE
+#  tuple creation
+# 1. empty
+t = ();
+print(type(t))
+
+t1 = 10,
+print(type(t1))
+
+t2 = 10, 20, 30, 40, 90
+print(type(t2))
+
+# min & max functions
+
+print(min(t2))
+print(max(t1))
+
+#  Tuple Packing and Unpacking:
+
+a = 10,
+b = 20,
+c = 30,
+d = 40
+
+t4 = a,b,c,d
+print(t4)
+print(type(t4))
+
+t5 = 10, 20, 30, 40
+a, b, c, d = t5;
+print(a)
+
+# write a program to sum of tuple
+
+t6 = 10, 20, 30, 40, 50, 60, 70, 80
+
+sum = 0;
+for i in t6:
+    sum = sum+i;
+
+print(sum)
+
+#  SET data structure
+#  set creation ways
+
+s = {10, 20, 30, 40, 60, 45, 76, 22}
+print(type(s))
+print(s)
+
+l = [10, 20, 30, 40, 60, 45, 76, 22]
+s1 = set(l)
+print(type(s1))
+print(s1)
+
+s2 = set(range(10))
+
+print(type(s2))
+print(s2)
+
+
+# Dictionary
+
+d = {};
+d1 = dict();
+d3 = {100: 'ANR', 200: 'Bhupathi', 300: 'Reddy'}
+print(type(d))
+print(type(d1))
+
+d[100] = 'Shiva';
+d[200] = 'Senkar';
+d[300] = 'Prabha';
+d[400] = 'Prashanthi'
+
+print(d)
+print(d3)
+print(d3[100])
+
+del d3[300]
+print(d3)
+d3.clear()
+print(d3)
+
+d4 = dict([(100, 'durga'), (200, 'shiva'), (300,'Prabha')])
+# t6 = tuple(200,300, 500);
+# t7 = tuple('ANR', 'OM', 'Shiva')
+# print(d4)
+# d5 = dict(t6, t7)
+# print(d5)
+
+print(len(d4))
+
+print(d4.get(500, 'Priya'))
+
+d4.pop(300)
+
+print(d4)
+d4.popitem()
+print(d4)
+
+print(d4.keys())
+print(d4.values())
+
+for k,v in d3.items():
+    print(k ,'-',v)
+
+d5 = d3.copy()
+print(d5)
+d5.setdefault(100, 'Haadya')
+print(d5)
+
+d5.update(d3)
+print(d5)
