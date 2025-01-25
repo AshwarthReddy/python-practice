@@ -50,6 +50,86 @@ print('the bigger no of 100, 600 is :', biggest_no(100, 600))
 print('the bigger no of 999999, 66666666 is :', biggest_no(999999, 66666666))
 
 
+def isEven(number):
+  if number % 2 ==0:
+    return True;
+  else: return False;
+
+
+numbers = [100, 2000, 299, 444, 999, 222];
+even_numbers = list(filter(isEven, numbers));
+print(even_numbers)
+
+odd_numbers = list(filter(lambda x:x%2 !=0, numbers))
+print(odd_numbers)
+
+squer_numbers = list(map(lambda x:x*2, numbers))
+print(squer_numbers)
+
+from functools import reduce;
+
+total_sum = reduce(lambda x,y: x+y, numbers);
+print(total_sum)
+
+sum_of_two_hundreds = reduce(lambda x,y:x+y, range(1, 200));
+print(sum_of_two_hundreds)
+
+# Function Aliasing
+
+def greet(name):
+  print('Good Evening', name);
+
+greet('Ganeshaya')
+
+wish = greet;
+wish('OM')
+
+del greet;
+
+wish('Amma')
+
+
+#  Generators
+
+def myGen():
+  yield 'A';
+  yield 'B';
+  yield 'C';
+
+g = myGen();
+print(type(g))
+print(next(g))
+print(next(g))
+# print(next(g))
+# print(next(g))
+
+def countDown(num):
+  print('countDown start')
+  while num>0:
+    yield num;
+    num = num-1;
+
+values = countDown(5)
+
+for x in values:
+  print(x)
+
+print()
+
+def generate_first_n_numbers(num):
+  n = 1;
+  while n<num:
+    yield n;
+    n = n+1;
+
+
+values = generate_first_n_numbers(10)
+
+# for i in values:
+#   print(i)
+
+nums = list(values)
+print(nums)
 
 
 
